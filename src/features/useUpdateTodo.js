@@ -8,7 +8,7 @@ export function useUpdateTodo(){
         mutationFn: ({newTodoData, id}) => updateTodo(newTodoData, id),
         onSuccess: () => {
             quryClient.invalidateQueries({
-                queryKey: ['todos']
+                queryKey: ['todos', 'todo'],
             })
         }
     })
