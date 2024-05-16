@@ -1,9 +1,13 @@
-function Button({children,type, onOpenModal}) {
-    const colorType = {primary: 'bg-blue-500',danger: 'bg-red-500'}
+import { Link } from "react-router-dom"
+
+function Button({children, onClick, to, className}) {
+    const classList = `p-2 min-w-[100px] text-center text-stone-200 rounded-lg min-w-30 transition-all mx-1 ${className}`
+
+    if(to) return <Link to={to} className={classList}>{children}</Link>
 
     return (
-        <button onClick={onOpenModal} className={`${colorType[type]} px-10 py-2 rounded-xl w-full`}>
-           {children} 
+        <button onClick={onClick} className={classList}>
+            {children} 
         </button>
     )
 }

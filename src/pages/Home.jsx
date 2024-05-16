@@ -8,11 +8,12 @@ function Home() {
 
     return (
         <div>
-            <Link to='add/todo' className="p-2 fixed right-5 top-20 bg-blue-500 rounded-lg">Add Todo</Link>
+            <Link to='add/todo' className="p-2 absolute right-5 top-20 bg-blue-500 rounded-lg ">Add Todo</Link>
 
-            <div className="mt-28 flex gap-5 flex-wrap justify-center">
+
+            <div className='my-10 mt-28 flex gap-5 flex-wrap justify-start'>
             {query.data?.data?.map(item => <TableList data={item} key={item.id} />)}
-        </div>
+            </div>
         </div>
     )
 }

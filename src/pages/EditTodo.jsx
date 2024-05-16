@@ -29,16 +29,16 @@ function EditTodo() {
 
     return (
         <div className="flex justify-center">
-            <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col mt-5">
-                <div className="flex flex-col">
-                    <label>Title</label>
-                    <input className="border-2 border-stone-500" {...register('title')}/>
+            <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col w-96 mt-5">
+                <div className="flex flex-col py-5">
+                    <label className="my-1">Title</label>
+                    <input className="p-2 border-2 border-stone-500" {...register('title')}/>
                 </div>
-                <div className="flex flex-col  mt-2">
-                    <label>Description</label>
-                    <textarea  className="border-2 border-stone-500 h-96" {...register('description')}></textarea>
+                <div className="flex flex-col mt-2">
+                    <label className="my-1">Description</label>
+                    <textarea className="p-2 border-2 border-stone-500 h-96" {...register('description')}></textarea>
                 </div>
-                <button className="mt-5 bg-blue-500 rounded-lg p-2">Submit</button>
+                <button className="mt-5 bg-blue-500 rounded-lg p-2 text-white">Submit</button>
             </form>
         </div>
     )
