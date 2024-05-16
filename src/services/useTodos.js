@@ -17,7 +17,6 @@ export async function createTodo(data){
     await fetch(`${API_URL}/store/todo`,{
         method: 'POST',
         headers: {
-            Accept: 'application.json',
             'Content-Type': 'application/json'
         },
         body: data,
