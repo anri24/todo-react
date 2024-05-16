@@ -5,8 +5,6 @@ import { Link } from "react-router-dom"
 
 function Home() {
     const query = useQuery({queryKey: ['todos'], queryFn: getTodos})
-    console.log(query)
-
 
     return (
         <div>

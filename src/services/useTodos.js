@@ -22,3 +22,19 @@ export async function createTodo(data){
         body: data,
     })
 }
+
+export async function updateTodo(data,id){
+    await fetch(`${API_URL}/update/todo/${id}`,{
+        method: 'PATCH',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: data
+    })
+}
+
+export async function deleteTodo(id){
+    await fetch(`${API_URL}/delete/todo/${id}`,{
+        method: 'DELETE',
+    })
+}
